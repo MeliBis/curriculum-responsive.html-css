@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   text-decoration: none; 
+   font-family:Ubuntu, sans-serif; 
+
+}
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+}
+nav .navbar{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .navbar .logo a{
+    font-size: 40px;
+    font-weight: 500;
+    color: #4070f4;
+}
+nav .navbar .menu{
+    display: flex;
+
+}
+nav .navbar .menu li {
+    margin: 0 8px;
+    list-style: none;
+}
+.navbar .menu li a{
+    font-size: 18px;
+    font-weight: 500;
+    color: #0e2431;
+}
+.navbar .media-icons a{
+    font-size: 18px;
+    margin: 0 6px;
+    color: #4070f4;
+}
+/* side */
+nav .menu-btn,
+.navbar .cancel-btn {
+    position:absolute;
+    color:rgb(9, 8, 8);
+    font-size: 20px;
+    right: 30px;
+    top: 20px;
+    display: none;
+}
+nav .menu-btn{
+    color: #4070f4;
+}
+/* home */
+.home{
+    height: 100vh;
+    width: 100%;
+    background: url("./assets/perfil.png") no-repeat;
+    background-position: right ;
+    border-style: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+
+}
+.home .home-content{
+    height:100% ;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.home .text .text-one{
+    font-size: 25px; 
+}
+.home .text .text-two{
+    font-size: 75px; 
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .text .text-three{
+    font-size: 40px; 
+}
+.home .text .text-four{
+    font-size: 23px; 
+    margin: 5px 0;
+}
+.home .button{
+    margin: 14px 0;
+}
+.home .button button{
+    outline: none;
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 8px 16px;
+    background-color: #4070f4;
+    border: none;
+    border-radius: 5px;
+}
+
+
+/* responsive */
+@media (max-width: 816px) {
+    nav .navbar .menu{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        max-width: 400px;
+        width: 100%;
+        background-color:#0e2431 ;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 60px;
+        transition: all 0.5s ease;
+}
+nav .navbar.active .menu {
+    left: 0;
+}
+.navbar .menu li a{
+    display: block;
+    margin: 10px 0;
+    font-size: 23px;
+    color: #fff;
+}
+.navbar .media-icons a{
+    display: none;
+    
+}
+nav .menu-btn,
+.navbar .cancel-btn {
+    display: block;
+}
+}
