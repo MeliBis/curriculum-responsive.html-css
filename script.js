@@ -1,3 +1,4 @@
+//side Nav
 let menuBtn = document.querySelector(".menu-btn");
 let cancelBtn = document.querySelector(".cancel-btn");
 let navBar = document.querySelector(".navbar");
@@ -13,3 +14,15 @@ cancelBtn.onClick = function() {
     navBar.classList.remove("active");
 
 }
+//Sticky Navigation menujs code
+let nav = document.querySelector("nav");
+let val;
+windows.onscroll = function() { 
+    if(document.documentElement.scrollTop > 20){
+        nav.classList.add("sticky");
+    }else{
+        nav.classList.remove("sticky");
+
+    }
+}
+/* habilidades */
