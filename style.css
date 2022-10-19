@@ -14,6 +14,7 @@
 }
 html{
     color: #333;
+    scroll-behavior: smooth;
 }
 nav{
     position: fixed;
@@ -44,9 +45,7 @@ nav .navbar .logo a{
 
 nav .navbar .menu{
     display: flex;
-
 }
-
 nav .navbar .menu li {
     margin: 0 8px;
     list-style: none;
@@ -60,7 +59,7 @@ nav.sticky .navbar .menu li a {
     color: #0e2431;
 }
 .navbar .menu li a:hover{
-    color: var(--second-color);
+    color: var(--main-color);
 }
 .navbar .media-icons a{
     font-size: 18px;
@@ -71,13 +70,13 @@ nav.sticky .navbar .media-icons a{
     color: #fff;
 }
 .navbar .media-icons a:hover{
-    color: var(--second-color);
+    color: var(--main-color);
     background-color: #fff;
 }
 .navbar .media-icons a{
     font-size: 18px;
     margin: 0 6px;
-    color: var(--second-color);
+    color: var(--main-color);
 }
 /* side */
 nav .menu-btn,
@@ -88,7 +87,8 @@ nav .menu-btn,
     right: 30px;
     top: 20px;
     display: none;
-}
+/*     z-index: 2;
+ */}
 nav .menu-btn{
     color: var(--main-color);
 }
@@ -148,7 +148,9 @@ nav .menu-btn{
     border-color: var(--main-color);
 }
 /* about */
+section{
 
+}
 section .content{
     width: 80%;
     margin: 40px auto;
@@ -158,6 +160,8 @@ section .title{
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
+    z-index: 2;
+
 }
 section .title span{
     font-size: 30px;
@@ -248,6 +252,7 @@ section .button button:hover{
 .skill-details .left .experience .num{
     font-size:80px ;
     color: black;
+    font-weight: 500;
 } 
 .skill-details .left .experience .exp{
     font-size:18px ;
@@ -264,7 +269,8 @@ section .button button:hover{
 .skills .skill-details .boxes{
     width: 45%;
     display: flex;
-
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .skills .skill-details .boxes .box{
     width: calc(100% / 2 -20px);
@@ -280,6 +286,84 @@ section .button button:hover{
     color: var(--main-color);
 
 }
+/* servicios */
+.services .boxes{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.services .boxes .box{
+    width:calc(100% /3 -20px) ;
+    margin: 20px 0;
+    border-radius:12px;
+    box-shadow:0 5px 10px rgb(0, 0, 0, 0.15) ;
+    text-align: center;
+    padding: 30px 20px;
+    transition: all 0.6 ease;
+
+}
+.services .boxes .box:hover{
+    background-color: var(--main-color);
+    color: #fff;
+
+}
+
+.services .boxes .box .icon{
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    text-align: center; 
+    line-height: 50px;
+    margin: 0 auto 10px auto;
+    transition: all 0.4 ease;
+
+}
+.services .boxes .box:hover .icon{
+    background-color: #fff;
+    color: var(--main-color);
+}
+.services .boxes .box:hover .topic{
+    color: #fff;
+}
+ /* contacto */
+ .contact .text{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+ }
+ .contact{
+    background-color:  #fef5f7;
+    padding: 20px 0;
+ }
+/* footer */
+footer {
+    background-color: var(--main-color);
+    text-align: center;
+    color: #fff;
+    padding: 15px ;
+}
+footer .text span a{
+    color: #fff;
+    font-size:18px ;
+    font-weight: 500;
+}
+footer .text span a:hover{
+    text-decoration:underline ;
+}
+/* boton scroll */
+.scroll-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 12px;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
 
 
 /* responsive */
@@ -289,6 +373,11 @@ section .button button:hover{
     }
     .skills .content{
         width: 90%;
+    }
+    .services .content{
+        width: 90%;
+
+
     }
 }
 @media (max-width: 1090px) {
@@ -305,6 +394,12 @@ section .button button:hover{
         width: 85%;
         margin: 40px 0;
     }
+    .services .boxes .box{
+        width: calc(100% / 2 - 20px);
+    }
+    .contact .text{
+        width: 90%;
+     }
 }
 @media (max-width: 816px) {
     nav .navbar .menu{
@@ -343,6 +438,18 @@ nav .menu-btn,
 .home .text .text-three{
 font-size: 60px;
 }
+.skills .skill-details{
+    flex-direction:column;
+    align-items:center ;
+    justify-content: space-between;
+  }
+  .skills .skill-details .left{
+    width: 90%;
+  }
+  .skills .skill-details .boxes{
+    width: 90%;
+    margin: 40px 0;
+  }
 }
  @media (max-width: 898px) {
     .home .text .text-two{
@@ -353,4 +460,7 @@ font-size: 60px;
     .home .text .text-three{
         font-size: 33px;
         }
+        .contact .text{
+            width: 100%;
+         }
 } 
