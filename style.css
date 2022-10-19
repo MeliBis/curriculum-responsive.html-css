@@ -77,7 +77,7 @@ nav.sticky .navbar .media-icons a{
     font-size: 18px;
     margin: 0 6px;
     color: var(--main-color);
-    
+
 }
 /* side */
 nav .menu-btn,
@@ -193,14 +193,18 @@ section .title span::after{
 }
 .about .about-details right{
     width: 45%;
-
+    
 }
 .about .about-details right img{
     height: 400px;
     width: 400px;
     object-fit: cover;
-    border-radius: 12px;
+ 
 }
+/* .right img{
+    padding: 10px;
+    border: 10px solid var(--main-color);
+} */
 .about .about-details .left{
     width: 55%;
 }
