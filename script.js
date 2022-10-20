@@ -1,5 +1,5 @@
 //side Nav
-let menuBtn = document.querySelector(".menu-btn");
+/* let menuBtn = document.querySelector(".menu-btn");
 let cancelBtn = document.querySelector(".cancel-btn");
 let navBar = document.querySelector(".navbar");
 
@@ -13,7 +13,8 @@ cancelBtn.onClick = function() {
     menuBtn.style.pointerEvents = "auto";
     navBar.classList.remove("active");
 
-}
+} */
+
 //Sticky Navigation menujs code
 let nav = document.querySelector("nav");
 let val;
