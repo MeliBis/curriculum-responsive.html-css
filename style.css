@@ -24,9 +24,62 @@ nav{
     transition: all 0.4 easy;
     z-index: inherit;99
 }
-nav.sticky{
+/* nav.sticky{
     padding: 13px 0;
     background-color: var(--main-color);
+} */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px ;
+    z-index: 1000;
+ }
+ nav.stycky{
+    padding:5px 100px;
+    background: #fef5f7;
+
+ }
+ nav .logo{
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+ }
+ nav ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+ nav ul li{
+    position: relative;
+    list-style: none;
+}
+nav ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500;
+    transition: 0.5s;
+
+}
+
+nav.stycky .logo,
+nav.stycky ul li a{
+    color: #fff;
 }
 nav .navbar{
     width: 90%;
@@ -35,9 +88,9 @@ nav .navbar{
     align-items: center;
     justify-content: space-between;
 }
-nav.sticky .navbar .logo a{
+/* nav.sticky .navbar .logo a{
     color: #fff;
-}
+} */
 nav .navbar .logo a{
     font-size: 40px;
     font-weight: 500;
@@ -51,9 +104,9 @@ nav .navbar .menu li {
     margin: 0 8px;
     list-style: none;
 }
-nav.sticky .navbar .menu li a {
-    color: #fff;
-}
+/* nav.sticky .navbar .menu li a {
+    color: var(--main-color);
+} */
 .navbar .menu li a{
     font-size: 18px;
     font-weight: 500;

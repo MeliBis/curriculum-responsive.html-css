@@ -14,16 +14,10 @@ cancelBtn.onClick = function() {
     navBar.classList.remove("active");
 
 } */
-
 //Sticky Navigation menujs code
-let nav = document.querySelector("nav");
-let val;
-windows.onscroll = function() { 
-    if(document.documentElement.scrollTop > 20){
-        nav.classList.add("sticky");
-    }else{
-        nav.classList.remove("sticky");
+window.addEventListener("scroll", function(){
+    var nav = this.document.querySelector("nav");
+    nav.classList.toggle("stycky", this.window.scrollY > 0)
 
-    }
-}
+})
 /* habilidades */
