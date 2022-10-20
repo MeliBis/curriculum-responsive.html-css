@@ -156,6 +156,7 @@ nav.sticky .navbar .media-icons a{
 /*     background-size: cover;
  */    background-attachment: fixed;
     flex-direction: column;
+;
 
 }
 .home .home-content{
@@ -207,7 +208,7 @@ section{
 
 }
 section .content{
-    width: 80%;
+    width: 60%;
     margin: 40px auto;
     font-family: 'poppins', sans-serif;
 }
